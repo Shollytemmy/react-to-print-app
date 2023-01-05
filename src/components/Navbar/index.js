@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Link } from 'react-router-dom'
+import './navbar.css'
 
 export const Navbar = () => {
+    const [mobileView, setMobileView] = useState(false)
   return (
     <nav className='navbar'>
         <h3 className='logo'>Logo</h3>
@@ -18,10 +21,14 @@ export const Navbar = () => {
                 <li>Contact</li>
             </Link>
 
-              <Link to="/" className='settings'>
-                <li>Settings</li>
+              <Link to="/" className='login'>
+                <li>Login</li>
             </Link>
         </ul>
+
+        <button className="mobile__view">
+            {mobileView ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
+        </button>
 
 
     </nav>
