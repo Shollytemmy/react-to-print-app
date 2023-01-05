@@ -39,3 +39,59 @@
     border: 1px solid yellow;
     border-radius: 5px ;
 }
+
+.mobile__viewbtn{
+    display: none;
+}
+
+
+@media screen and (max-width: 780px) {
+    .logo{
+        display: flex;
+        position: absolute;
+        left: 35px;
+        top: 15px;
+
+    }
+
+    .nav-links{
+        display: none;
+    }
+    
+
+    .navMobile_links{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        background-color: hsl(189, 67%, 19%) ;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navMobile_links > a{
+        list-style: none;
+        color: #ffff;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        padding: 32px;
+        transition:  all 0.5s ease;
+    }
+
+    .login{
+        border: none;
+    }
+
+    .mobile__viewbtn{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        background-color: hsl(189, 67%, 19%);
+        color: #ffff;
+        /* top: 15px; */
+        right: 25px;
+        outline: none;
+        border: none;
+    }
+}

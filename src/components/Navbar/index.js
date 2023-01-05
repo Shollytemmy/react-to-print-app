@@ -8,7 +8,9 @@ export const Navbar = () => {
   return (
     <nav className='navbar'>
         <h3 className='logo'>Logo</h3>
-        <ul className="nav-links">
+        <ul className={mobileView ? "navMobile_links ": "nav-links"}
+        onClick={() => setMobileView(false)}
+        >
             <Link to="/" className='home'>
                 <li>Home</li>
             </Link>
@@ -26,8 +28,10 @@ export const Navbar = () => {
             </Link>
         </ul>
 
-        <button className="mobile__view">
-            {mobileView ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
+        <button className="mobile__viewbtn"
+        onClick={() => setMobileView(!mobileView)}
+        >
+            {mobileView ? <i className='fas fa-times'></i> : <i className='fas fa-bars'></i>}
         </button>
 
 
